@@ -1,0 +1,97 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+.todoapp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 550px;
+    margin: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+}
+h1{
+    position: absolute;
+    margin: 0;
+    top: -185px;
+    width: 100%;
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+}
+.new-todo{
+    position: relative;
+    margin: 15px;
+    width: 95%;
+    background:none;  
+    outline:none;  
+    border:none;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+.todo-lists{
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.todo-list:hover > button{
+  display: inline;
+  float: right;
+  line-height: 33px;
+}
+.delete{
+  margin-right: 8px;
+  display: none;
+  border: none;
+  background-color: #fff;
+}
+.delete:hover{
+  color: red;
+}
+footer{
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.check{
+  margin-right: 10px;
+}
+.screening {
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+  background:none;  
+  outline:none;  
+  border:none;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.screening:hover{
+  border: 1px solid rgba(175, 47, 47, 0.2);
+}
+.active {
+  border: 1px solid rgba(175, 47, 47, 0.2);
+}
+.clear{
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+  background:none;  
+  outline:none;  
+  border:none;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.todos-hide{
+  display: none;
+}
+.Complete{
+  text-decoration: line-through;
+}
