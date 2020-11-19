@@ -1,0 +1,3 @@
+ES5是先创建子类this 然后通过call方法
+
+ES6 是先创建父类this ，然后再用子类this修饰父类this
