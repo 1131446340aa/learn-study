@@ -1,0 +1,41 @@
+<!--
+ * @Date: 2020-07-13 11:52:50
+ * @LastEditors: 黄力豪
+ * @LastEditTime: 2020-07-13 13:12:37
+ * @FilePath: /learn/canvas/index.html
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="app"></canvas>
+</body>
+
+<script>
+
+    let app = document.getElementById('app')
+    let pencil = app.getContext('2d')
+    pencil.fillStyle = 'red'
+    pencil.strokeStyle = 'blue'
+    pencil.fillRect(10, 10, 50, 50)
+    pencil.strokeRect(10, 10, 50, 50)
+    pencil.clearRect(10, 10, 14, 14)
+
+
+</script>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="app" width="800" height="600"></canvas>
+</body>
+
+<script>
+    /** @type {HTMLCanvasElement} */
+    const app = document.getElementById('app')
+    
+    const pencil = app.getContext('2d')
+    pencil.save()
+    pencil.translate(400, 300)
+    pencil.save()
+    pencil.beginPath()
+    pencil.arc(0, 0, 200, 0, Math.PI * 2)
+
+    pencil.lineWidth = 10
+    pencil.strokeStyle = 'darkgrey'
+    pencil.stroke()
+    pencil.closePath()
+
+
+    for (let i = 0; i < 60; i++) {
+        pencil.rotate(Math.PI / 30)
+        pencil.beginPath()
+        pencil.moveTo(185, 0)
+        pencil.lineTo(190, 0)
+        pencil.strokeStyle = 'orange'
+        pencil.lineWidth = 2
+        pencil.stroke()
+        pencil.closePath()
+    }
+    for (let i = 0; i < 12; i++) {
+        pencil.rotate(Math.PI / 6)
+        pencil.beginPath()
+        pencil.moveTo(180, 0)
+        pencil.lineTo(200, 0)
+        pencil.strokeStyle = 'darkgrey'
+        pencil.lineWidth = 10
+        pencil.stroke()
+        pencil.closePath()
+    }
+
+    var time = new Date()
+    var hour = time.getHours()
+    hour > 12 && (hour = hour - 12)
+    var min = time.getMinutes()
+    var second = time.getSeconds()
+    pencil.restore()
+        // pencil.restore()
+    pencil.save()
+
+
+    function render() {
+        pencil.restore()
+
+        pencil.clearRect(-100, -100, 360, 360)
+        pencil.rotate(Math.PI / 30)
+        pencil.save()
+        pencil.beginPath()
+        pencil.moveTo(-30, 0)
+        pencil.lineTo(150, 0)
+        pencil.strokeStyle = 'red'
+        pencil.lineWidth = 2
+        pencil.stroke()
+        pencil.closePath()
+
+    }
+    setInterval(render, 1000)
+</script>
+
+</html>

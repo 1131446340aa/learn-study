@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="app" width="800" height="300" style="width: 400px;height: 200px;"></canvas>
+    <video src="http://vodkgeyttp8.vod.126.net/cloudmusic/MjQ3NDQ3MjUw/89a6a279dc2acfcd068b45ce72b1f560/bf2750483ed02d4c6263dffefa5959d7.mp4?wsSecret=be3f390cdd2c646896ed7168bd5f6826&wsTime=1603938496" controls="controls"></video>
+</body>
+
+<script>
+    /** @type {HTMLCanvasElement} */
+    const app = document.getElementById('app')
+    const video = document.querySelector('video')
+    const pencil = app.getContext('2d')
+        // const render = function() {
+        //   pencil.drawImage(video, 0, 0, 800, 600)
+        //   requestAnimationFrame(render)
+        // }
+        // video.onplay = function() {
+        //render()
+        // }
+
+    const image = new Image()
+    image.src = './xx.jpeg'
+    image.onload = function() {
+            pencil.drawImage(image, 50, 50)
+        }
+        // pencil.closePath()
+        // pencil.stroke()
+        // pencil.fill()
+</script>
+
+</html>

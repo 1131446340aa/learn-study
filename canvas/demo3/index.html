@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="app" width="1400" height="600"></canvas>
+</body>
+
+<script>
+  /** @type {HTMLCanvasElement} */ 
+  const app = document.getElementById('app')
+  const pencil = app.getContext('2d')
+  // pencil.beginPath()
+  // pencil.arc(600,140,100,0,360)
+  // pencil.strokeStyle = 'red'
+  // pencil.fillStyle = 'yellow'
+
+  // pencil.fill()
+  let x =100
+  function render(){
+    pencil.clearRect(0,0,1400,600)
+    pencil.font = '50px 宋体'
+    pencil.strokeText('海哥天下无敌 ',x,200)
+    pencil.fillText('hello houyuechun',x,100)
+
+    // pencil.
+    x=x+3
+    
+    requestAnimationFrame(render)
+    
+  }
+  render()
+
+  
+  // pencil.closePath()
+
+  // pencil.stroke()
+  // pencil.fill()
+</script>
+</html>

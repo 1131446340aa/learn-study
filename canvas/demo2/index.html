@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="app" width="600" height="600"></canvas>
+</body>
+
+<script>
+  /** @type {HTMLCanvasElement} */ 
+  const app = document.getElementById('app')
+  const pencil = app.getContext('2d')
+  pencil.beginPath()
+  pencil.moveTo(50,50)
+  pencil.lineTo(50,300)
+  pencil.lineTo(300,100)
+  pencil.lineTo(300,250)
+  pencil.closePath()
+  pencil.fillStyle = 'red'
+  // pencil.fill()
+  
+  pencil.strokeStyle = 'aqua'
+  pencil.lineWidth = 20 
+  pencil.lineCap = 'round' // 端点线设置圆角
+  // pencil.lineJoin = 'round' //交点端点线设置圆角
+  // pencil.miterLimit = 2 //裁剪交点
+  pencil.stroke()
+  // pencil.fill()
+</script>
+</html>
