@@ -1,0 +1,16 @@
+{
+  "name": "koa-ts-full-stack-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "cd server && npm run dev",
+    "client":"cd client && npm run serve",
+    "dev":"concurrently \"npm run serve\" \"npm run client\"",
+    "build:common": "tsc -b -w ./common/  --verbose"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^2.7.0"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "types": [
+      "node",
+      "jest",
+      "koa-body",
+    ],
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "../dist/server",
+    "strict": false,
+    "esModuleInterop": true,
+    "typeRoots": [
+      
+      "./node_modules/koa-body",
+      "./node_modules/@types",
+      "src/typings"
+
+    ],
+    "paths": {
+    
+      "@lib": [
+        "./src/app/lib/index"
+      ],
+      "@lib/*": [
+        "./src/app/lib/*"
+      ],
+      "@common": [
+        "../common"
+      ],
+      "@common/*": [
+        "../common/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "copyStatic.ts",
+    "rm-dist.ts"
+  ]
+}
