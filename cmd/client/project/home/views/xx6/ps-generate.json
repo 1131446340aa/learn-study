@@ -1,0 +1,9 @@
+{
+  "swaggerUrl": "https://petstore.swagger.io/v2/swagger.json",
+  "type": "/pet",
+  "exclude": [
+    ""
+  ],
+  "append": "",
+  "clear": ""
+}
