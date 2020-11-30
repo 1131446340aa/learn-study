@@ -11,6 +11,6 @@ cookie有大小限制，4kb 好像最多只能有20个
 cookie 只支持字符串
 
 
-cookie唱见字段
+cookie常见字段
 
-name，value，express，path，domain，httpOnly
+name，value，express，path，domain，httpOnly sameSite max-age

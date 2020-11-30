@@ -1,9 +1,25 @@
-function test() {
-  let obj = { a: 4, b: 6 };
-  with (obj) {
-    var a = 3;
-    b = 6;
-  }
-  console.log(a);
+Function.prototype.bind1 = function(context,...args){
+    
+    var self = this;
+  
+    let fNop = function(){};
+    let fBound =  function(...bindArgs){ 
+       
+        return self.apply(this instanceof fBound ? this:context ,args.concat(bindArgs)); 
+    }
+    fNop.prototpye = this.prototype; 
+    fBound.prototype = new fNop();
+    return fBound;
 }
-test();
+
+function test(){
+    console.log(this.a)
+}
+let obj1 ={
+    a:4
+}
+
+let obj2 ={
+    a:3
+}
+test.bind1(obj1).bind1(obj2)()
