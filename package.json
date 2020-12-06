@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "@types/koa": "^2.11.6",
+    "@types/node": "^14.14.10",
     "babel-plugin-import": "^1.13.1"
   },
   "dependencies": {
