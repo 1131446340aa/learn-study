@@ -51,14 +51,9 @@ export let store1 = {
         count: 2
       },
       getters: {
-        z(){}
+        z() { }
       }
     }
   }
 }
-export default createStore(store1);
-
-
-interface x {
-  a: (num: string) => string
-}
+export default createStore(store1)

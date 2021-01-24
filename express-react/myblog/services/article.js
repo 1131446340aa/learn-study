@@ -149,6 +149,7 @@ async function postUpdateCollection({ articleId, isAdd, userId }) {
       artiId: articleId,
       userId
     }
+    
   }
   let ixExist = await isCollection.findOne(options)
   result = isAdd && !ixExist ? await isCollection.create(options.where) : await isCollection.destroy(options);

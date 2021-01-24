@@ -46,6 +46,7 @@ export default {
       router: useRouter(),
       isPlay: Store.musicStore.isPlay,
     });
+    
     let songitem = Store.musicStore.songItem;
 
     const methods = {

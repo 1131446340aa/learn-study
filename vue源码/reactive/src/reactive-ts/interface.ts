@@ -11,6 +11,7 @@ export interface DefineProperty {
   get: _Function
   set: <T extends object>(value?: T) => T
 }
+
 export interface EffectOptions {
   computed?: boolean
   lazy?: boolean

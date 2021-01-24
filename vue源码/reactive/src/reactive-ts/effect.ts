@@ -51,8 +51,6 @@ export const track = <T extends object>(target: T, type: effectTypeGet, key: str
 }
 export const trigger = <T extends object>(target: T, type: effectTypeSet, key: strNumSym, value?: any) => {
   let depsMap = targetMap.get(target)
-
-
   if (!depsMap) return
   let ComputedRunner: Set<Effect> = new Set()
   let effectRunner: Set<Effect> = new Set()
